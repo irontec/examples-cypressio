@@ -1,0 +1,6 @@
+{
+    "env": {
+        "pre": "http://www.google.com",
+        "pro": "http://wwww.facebook.com"
+      }
+}

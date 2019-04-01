@@ -1,0 +1,24 @@
+{
+  "name": "ejercicios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:openpre": "cypress open --env pro=http://www.google.com",
+    "test:preprod": "./node_modules/.bin/cypress open --env environment=preprod",
+    "test:prod": "./node_modules/.bin/cypress open --env environment=prod"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^3.2.0",
+    "cypress-pipe": "^1.3.3",
+    "mocha": "^5.2.0",
+    "mochawesome": "^3.1.1"
+  },
+  "dependencies": {
+    "faker": "^4.1.0"
+  }
+}
