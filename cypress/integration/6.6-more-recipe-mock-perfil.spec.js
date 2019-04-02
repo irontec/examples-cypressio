@@ -2,12 +2,19 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     // returning false here prevents Cypress from
     // failing the test
     return false
-  })
+})
+
+import { login } from '../utils'
 
 describe('More recipes actions', ()=>{
     
     before(() => {
+        //Comando POST login
         cy.requestlogin()
+    
+        // Con función
+      /*cy.visit('https://more-recipes17.herokuapp.com/signin')
+        login('irontec', 'irontec2019')*/
     });
 
     it('Mock respuesta perfil', ()=>{   
