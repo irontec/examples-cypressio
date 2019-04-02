@@ -10,14 +10,12 @@ const fakeRecipe = {
 describe('More recipes', ()=>{
 
     before(() => {
-        cy.fixture('user.json').as('userJSON')
-        cy.get('@userJSON').then((user)=>{ 
-            cy.login(user.username, user.password)
-        })
-        cy.wait(2000)
+        cy.requestlogin()
     });
    
     it('Nueva receta', ()=>{  
+
+        cy.visit('https://more-recipes17.herokuapp.com/')
 
         // Tenemos que pasarle el token
         console.log('LocalS', localStorage)

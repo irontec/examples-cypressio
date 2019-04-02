@@ -35,6 +35,24 @@ Cypress.Commands.add('login', (username, pass) => {
 
 })
 
+Cypress.Commands.add('requestlogin', (username, pass) => {
+    cy.request({
+        method: 'POST',
+        url: 'https://more-recipes17.herokuapp.com/api/v1/users/signin',
+        headers: {
+            // recuperamos el token
+            'x-access-token': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: {
+            username: 'irontec',
+            password: 'irontec2019'
+        }
+    }).then((resp) => {
+        window.localStorage.setItem('token', resp.body.token)
+      })
+})
+
 Cypress.Commands.add('envselection', () => {
     const env = Cypress.env('environment')
     return cy.visit(Cypress.env()[env])

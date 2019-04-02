@@ -1,6 +1,13 @@
 {
-  "name": "Receta1",
-  "category": "categoria",
-  "ingredients": "ingredients",
-  "instructions": "intructions"
+  "status": "success",
+  "message": "Successfully created new recipe",
+  "id": 166,
+  "views": 0,
+  "upvote": 1500,
+  "downvote": 0,
+  "recipeName": "cake",
+  "category": "others",
+  "ingredients": "baking powder, flour, margarine",
+  "instructions": "pour and frisk egg with margarine",
+  "image": "../uploads/spice.jpg"
 }
